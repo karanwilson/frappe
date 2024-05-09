@@ -379,6 +379,8 @@ frappe.ui.form.on("DocType Action", {
 	}
 });
 
+let parenttype, parent;		// used in the form events for the child tables: links, actions and states
+
 // can't delete standard states
 frappe.ui.form.on("DocType State", {
 	before_states_remove: function (frm, doctype, name) {
